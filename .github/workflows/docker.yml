@@ -28,6 +28,6 @@ jobs:
         github-token: ${{ github.token }}
         push: ${{ github.ref == 'refs/heads/master' }}
         tags: |
-          "multidl/multi-downloader-nx:latest"
+          "resourjickx/my-custom-anidl-tools:latest"
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
