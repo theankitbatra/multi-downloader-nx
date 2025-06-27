@@ -145,6 +145,36 @@ const args: TAppArg<boolean|number|string|unknown[]>[] = [
     usage: '${ID}',
   },
   {
+    group: 'dl',
+    alias: 'sraw',
+    name: 'show-raw',
+    describe: 'Get Raw Show data',
+    docDescribe: true,
+    service: ['crunchy'],
+    type: 'string',
+    usage: '${ID}',
+  },
+  {
+    group: 'dl',
+    alias: 'seraw',
+    name: 'season-raw',
+    describe: 'Get Raw Season data',
+    docDescribe: true,
+    service: ['crunchy'],
+    type: 'string',
+    usage: '${ID}',
+  },
+  {
+    group: 'dl',
+    alias: 'slraw',
+    name: 'show-list-raw',
+    describe: 'Get Raw Show list data',
+    docDescribe: true,
+    service: ['crunchy'],
+    type: 'boolean',
+    usage: '',
+  },
+  {
     name: 'series',
     group: 'dl',
     alias: 'srz',
@@ -302,7 +332,7 @@ const args: TAppArg<boolean|number|string|unknown[]>[] = [
     describe: 'Select specific crunchy play stream by device, or disable stream with "none"',
     choices: [...Object.keys(CrunchyPlayStreams), 'none'],
     default: {
-      default: 'vidaa'
+      default: 'lgtv'
     },
     docDescribe: true,
     usage: '${device}'
